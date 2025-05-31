@@ -4,48 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criss Vevo Obfuscator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Professional JS Obfuscator -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
 </head>
 <body>
-  <div class="glass-wrapper">
-    <header>
-      <h1>Criss Vevo <span class="highlight">JavaScript Obfuscator</span></h1>
-      <p class="subtitle">Protect Your Code with Cutting-Edge Professional Obfuscation</p>
-    </header>
-    <main>
-      <section class="input-section">
-        <h2>Input JavaScript Code</h2>
-        <textarea id="inputCode" placeholder="Andika JavaScript code yako hapa..."></textarea>
-        <div class="security-controls">
-          <label>Security Level:</label>
-          <div class="slider-row">
-            <input type="range" id="securitySlider" min="1" max="3" value="2">
-            <span class="security-label" id="levelValue">MEDIUM</span>
-          </div>
-          <div class="levels">
-            <span>Basic</span>
-            <span>Standard</span>
-            <span>Advanced</span>
-          </div>
+  <!-- Hero Section - Mwanzilishi Bora -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Criss Vevo <span class="accent">Obfuscator</span></h1>
+      <h2 class="hero-tagline">Protect Your JavaScript Code with Professional Obfuscation</h2>
+      <p class="hero-desc">
+        We obfuscate your JavaScript code to the highest level. Fast, secure, and totally <span class="accent">Criss Vevo</span> branded.
+      </p>
+      <a href="#obfuscator" class="hero-btn">Start Obfuscating</a>
+    </div>
+  </section>
+
+  <!-- Main Obfuscator Section -->
+  <main id="obfuscator" class="main-box">
+    <section class="input-section">
+      <h2>Input JavaScript Code</h2>
+      <textarea id="inputCode" placeholder="Enter your JavaScript code here..."></textarea>
+      <div class="security-controls">
+        <label>Security Level:</label>
+        <div class="slider-row">
+          <input type="range" id="securitySlider" min="1" max="3" value="2">
+          <span class="security-label" id="levelValue">MEDIUM</span>
         </div>
-        <button id="obfuscateBtn" class="primary-btn">Obfuscate Now</button>
-      </section>
-      <section class="output-section">
-        <h2>Obfuscated Code</h2>
-        <div class="output-actions">
-          <button id="copyBtn" class="secondary-btn">Copy</button>
-          <button id="downloadBtn" class="secondary-btn">Download</button>
+        <div class="levels">
+          <span>Basic</span>
+          <span>Standard</span>
+          <span>Advanced</span>
         </div>
-        <textarea id="outputCode" readonly placeholder="Obfuscated code itatokea hapa..."></textarea>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 <span class="highlight">Criss Vevo</span> | Made with ❤️ for Developers</p>
-    </footer>
-  </div>
+      </div>
+      <button id="obfuscateBtn" class="primary-btn">Obfuscate Now</button>
+    </section>
+    <section class="output-section">
+      <h2>Obfuscated Code</h2>
+      <div class="output-actions">
+        <button id="copyBtn" class="secondary-btn">Copy</button>
+        <button id="downloadBtn" class="secondary-btn">Download</button>
+      </div>
+      <textarea id="outputCode" readonly placeholder="Here Protected Code..."></textarea>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <span class="accent">Criss Vevo</span> - Professional JavaScript Obfuscator</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
