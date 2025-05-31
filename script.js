@@ -7,6 +7,7 @@ const outputCode = document.getElementById('outputCode');
 const obfuscateBtn = document.getElementById('obfuscateBtn');
 const copyBtn = document.getElementById('copyBtn');
 const downloadBtn = document.getElementById('downloadBtn');
+const dots = document.querySelectorAll('.dot');
 
 // Security levels and options
 const levels = {
@@ -56,7 +57,9 @@ const levels = {
 };
 
 securitySlider.addEventListener('input', () => {
-  levelValue.textContent = levels[securitySlider.value].label;
+  const val = parseInt(securitySlider.value, 10);
+  levelValue.textContent = levels[val].label;
+  dots.forEach((dot, idx) => dot.classList.toggle('active', idx === val - 1));
 });
 
 // Obfuscate using javascript-obfuscator
@@ -88,4 +91,10 @@ downloadBtn.addEventListener('click', () => {
   a.href = URL.createObjectURL(blob);
   a.download = "criss-vevo-obfuscated.js";
   a.click();
+});
+
+// Initial state - set active dot
+document.addEventListener('DOMContentLoaded', () => {
+  levelValue.textContent = levels[securitySlider.value].label;
+  dots.forEach((dot, idx) => dot.classList.toggle('active', idx === parseInt(securitySlider.value, 10) - 1));
 });
