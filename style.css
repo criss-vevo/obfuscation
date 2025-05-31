@@ -27,7 +27,7 @@ body {
 }
 main {
   max-width: 720px;
-  margin: 0 auto 0 auto; /* No negative margin so header isn't covered */
+  margin: 0 auto 0 auto;
   z-index: 1;
   position: relative;
   padding: 0 7px;
@@ -39,7 +39,7 @@ main {
   padding: 30px 22px 24px 22px;
   margin-bottom: 32px;
   border: 2px solid #2f4858;
-  margin-top: 32px; /* Add top margin so first box sits below header */
+  margin-top: 32px;
 }
 .section-title {
   color: #f8eec7;
@@ -165,6 +165,40 @@ input[type="range"] {
   background: #1ce3d6;
   color: #172a3a;
 }
+
+/* Footer with external links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #15222e;
+  color: #1ce3d6;
+  border: 2px solid #1ce3d6;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.16s, color 0.16s, border 0.16s;
+}
+.footer-btn:hover {
+  background: #1ce3d6;
+  color: #15222e;
+  border: 2px solid #15222e;
+}
+.footer-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(1.2);
+}
 footer {
   text-align: center;
   color: #b7e3ea;
@@ -184,5 +218,9 @@ footer {
   .main-title {
     font-size: 1.1em;
     padding-top: 14px;
+  }
+  .footer-btn {
+    padding: 7px 10px;
+    font-size: .98em;
   }
 }
